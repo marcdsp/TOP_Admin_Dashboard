@@ -355,7 +355,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 25fr;
   overflow: auto;
-  height: 12rem;
+  height: 16rem;
 
 }
 
@@ -457,7 +457,7 @@ padding: 1rem;
 .trendingContent {
   gap: 1rem;
   padding: 1rem;
-  max-height: 3 00px;
+  max-height: 300px;
 }
 
 .trendingHeader {
