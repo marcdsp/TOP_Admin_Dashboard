@@ -162,6 +162,7 @@ color: #136a8a;
   align-items: center;
   padding-top: 8px;
 }
+
 .userAvatar img {
   max-width: 40px;
   border-radius: 100%;
@@ -173,8 +174,11 @@ color: #136a8a;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  font-weight: 700;
   padding-bottom: 8px;
 }
+
+
 
 .notification {
   align-self: center;
