@@ -12,79 +12,60 @@
 <body>
     <div class="container">
         <div class="sideBar">
-            <div class="sidebarTitle">Dashboard</div>
+            <div class="sidebarTitle"><i class="material-symbols-outlined .title" id="titleIcon">hive</i><span>Dashboard</span></div>
             <div class="sidebarMainMenu">
-                <div class="mainMenuHome">
-                    <span class="material-symbols-outlined">
-                        Home
-                        </span>
-                    <a href="index.htm" class="homeLink">Home</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Home</i><span>Home</span></a>
                 </div>
-                <div class="mainMenuProfile">
-                    <span class="material-symbols-outlined">
-                        Badge
-                        </span>
-                    <a href="index.htm" class="profileLink">Profile</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Badge</i><span>Profile</span></a>
                 </div>
-                <div class="mainMenuMEssages">
-                    <span class="material-symbols-outlined">
-                        Chat
-                        </span>
-                    <a href="index.htm" class="messagesLink">Messages</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Chat</i><span>Messages</span></a>
                 </div>
-                <div class="mainMenuHistory">
-                    <span class="material-symbols-outlined">
-                        History
-                        </span>
-                    <a href="index.htm" class="historyLink">History</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">History</i><span>History</span></a>
                 </div>
-                <div class="mainMenuTasks">
-                    <span class="material-symbols-outlined">
-                        Task
-                        </span>
-                    <a href="index.htm" class="tasksLink">Tasks</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Task</i><span>Tasks</span></a>
                 </div>
-                <div class="mainMenuCommunities">
-                    <span class="material-symbols-outlined">
-                        Groups
-                        </span>
-                    <a href="index.htm" class="communitiesLink">Communities</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Groups</i><span>Communities</span></a>
                 </div>
             </div>
             <div class="sidebarSubMenu">
-                <div class="subMenuSettings">
-                    <span class="material-symbols-outlined">
-                        Settings
-                        </span>               
-                    <a href="index.htm" class="settingsLink">Settings</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Settings</i><span>Settings</span></a>
                 </div>
-                <div class="subMenuSupport">
-                    <img src="images/"  class="supportIcon" alt="Support">                    
-                    <a href="index.htm" class="supportLink">Support</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Help</i><span>Support</span></a>
                 </div>
-                <div class="subMenuPrivacy">
-                    <img src="images/"  class="privacy" alt="Privacy">                    
-                    <a href="index.htm" class="privacyLink">Privacy</a>
+                <div class="link-2">
+                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Privacy_tip</i><span>Privacy</span></a>
                 </div>
             </div>
         </div>
         <div class="mainHeader">
             <div class="actionLinks">
                 <ul>
-                    <li>New</li>
-                    <li>Upload</li>
-                    <li>Share</li>
+                    <li class="link-2"><a href="index.htm" id="mainHeaderLinks">New</a></li>
+                    <li class="link-2"><a href="index.htm" id="mainHeaderLinks">Upload</a></li>
+                    <li class="link-2"><a href="index.htm" id="mainHeaderLinks">Share</a></li>
                 </ul>
             </div>
             <div class="search">
-                <div class="searhIcon"></div>
-                <div class="searhInput"></div>
+                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton">
+                    <i class="material-symbols-outlined">Search</i>
+               </button>
             </div>
-            <div class="notificationIcon"></div>
+            <div class="mainHeaderRight">
+            <div class="notificationIcon"><i class="material-symbols-outlined">notifications</i></div>
             <div class="userInfo">
-                <div class="userAvatar"></div>
-                <div class="userName"></div>
+                <div class="userAvatar"><img src="/assets/avatars/avatar (6).png"></div>
+                <div class="userName">Merv Hughes</div>
             </div>
+        </div>
         </div>
         <div class="content">
             <div class="contentProjects">
@@ -92,44 +73,50 @@
                 <div class="projectCards">
                     <div class="card">
                         <div class="cardSide"></div>
-                        <div class="cardMain">
-                            <h3>Project 1</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
+                        <div class="cardMain" id="cardMain">
+                            <h3>Landing Page</h3>
+                            <p>The first project of The Odin Project, aimed at teaching some basic css flexbox techniques and tying together other HTML and CSS</p>
+                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="cardSide"></div>
-                        <div class="cardMain">
-                            <h3>Project 1</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
+                        <div class="cardMain" id="cardMain">
+                            <h3>Rock Paper Scissors</h3>
+                            <p>First entry into using Javascript, loops and functions. I used some minimal css to make it look good on various screen sizes.</p><div class="cardIcons"><i class="material-symbols-outlined">star</i> <a href="https://marcdsp.github.io/rock_paper_scissors/"><i class="material-symbols-outlined" id="open">open_in_new</i></a><i class="material-symbols-outlined">share</i></div>
+
                         </div>
                     </div>
                     <div class="card">
                         <div class="cardSide"></div>
-                        <div class="cardMain">
-                            <h3>Project 1</h3>
+                        <div class="cardMain" id="cardMain">
+                            <h3>Etch-a-Sketch</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
+                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="cardSide"></div>
-                        <div class="cardMain">
-                            <h3>Project 1</h3>
+                        <div class="cardMain" id="cardMain">
+                            <h3>Calculator</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
+                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="cardSide"></div>
-                        <div class="cardMain">
-                            <h3>Project 1</h3>
+                        <div class="cardMain" id="cardMain">
+                            <h3>Sign-up Form</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
+                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="cardSide"></div>
-                        <div class="cardMain">
-                            <h3>Project 1</h3>
+                        <div class="cardMain" id="cardMain">
+                            <h3>Admin Dashboard</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
+                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
                         </div>
                     </div>
                 </div>
@@ -166,23 +153,36 @@
                     <div class="trending">
                         <div class="trendingHeader"><h2>Trending</h2></div>
                         <div class="trendingContent">
-                            <div class="rightSideCards">
-                                <div class="announceItem">
-                                    <h4>@millie</h4>
-                                    <p>This one's a monster </p>
-                                </div>
-                                <div class="announceItem">
-                                    <h4>@teo</h4>
-                                    <p>Ol clumsy legs </p>
-                                </div>
-                                <div class="announceItem">
-                                    <h4>@lizzo</h4>
-                                    <p>Don't keep me indoors</p>
-                                </div>
-                                <div class="announceItem">
-                                    <h4>@perny</h4>
-                                    <p>Ol clumsy legs </p>
-                                </div>                            </div>
+                                <div class="trenders">
+                                    <div class="trendPackage">
+                                    <div class="trendAvatar"><img src="/assets/avatars/avatar (5).png"></div>
+                                    <div class="announceItem">
+                                        <h4>@millie</h4>
+                                        <p>This one's a monster </p>
+                                    </div>
+                                    </div>
+                                    <div class="trendPackage">
+                                        <div class="trendAvatar"><img src="/assets/avatars/avatar (1).png"></div>                                   
+                                        <div class="announceItem">
+                                        <h4>@teo</h4>
+                                        <p>Ol clumsy legs </p>
+                                    </div>
+                                    </div>
+                                    <div class="trendPackage">
+                                        <div class="trendAvatar"><img src="/assets/avatars/avatar (3).png"></div>                                    
+                                        <div class="announceItem">
+                                        <h4>@lizzo</h4>
+                                        <p>Don't keep me indoors</p>
+                                    </div>
+                                    </div>
+                                    <div class="trendPackage">
+                                        <div class="trendAvatar"><img src="/assets/avatars/avatar (4).png"></div>                                   
+                                        <div class="announceItem">
+                                        <h4>@perny</h4>
+                                        <p>Ol clumsy legs </p>
+                                        </div>
+                                </div>               
+                            </div>
                         </div>
                     </div>
                 </div> 
