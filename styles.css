@@ -493,3 +493,20 @@ padding: 1rem;
   gap: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .sideBar .sidebarText {
+    display:none;
+  }
+  .sideBar {
+    min-width: 70px;
+    grid-column: 1/2;
+  }
+  .mainHeader {
+grid-column: 2/11;
+  }
+
+  .content {
+    grid-column: 2/11;
+  }
+
+  }
