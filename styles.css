@@ -251,7 +251,7 @@ padding-bottom: .5rem;
 
 .mainHeader {
     position: relative;
-    grid-column: 3 / 11; 
+    grid-column: 1 / 11; 
     grid-row: 1;
     box-shadow: var(--box-shadow-color) 2.4px 2.4px 3.2px;
     display: grid;
@@ -323,14 +323,14 @@ ul {
     overflow: auto;
     background-color: var(--content-background-color);
     grid-row: 2 / 11;
-    grid-column: 3 / 11;
+    grid-column: 1 / 11;
     display: grid;
     grid-template-columns: 7fr 3fr;
 
 }
 
 .contentProjects {
-  grid-column: 1 / 2;
+  grid-column: 1 / 3;
   display: grid;
   grid-template-rows: 1fr 15fr 1fr
 
@@ -401,112 +401,3 @@ ul {
 }
 
 
-.rightPanel {
-  grid-column: 2 / 3;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-
-
-.announcement {
-  grid-row: 1;
-  display: grid;
-  grid-template-rows: 1fr 7fr;
-  min-height: 100%;
-}
-
-.announceItem h3 {
-  font-size: .9rem;
-}
-
-.announceItem p {
-  font-size: .75rem;
-}
-
-
-.rightSideCards {
-  padding: 1rem;
-background-color: var(--card-color);
-  border-radius: 8px;
-  margin: .5rem;
-  margin-right: 2rem;
-  box-shadow: var(--box-shadow-color) 0px 1px 4px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-.announcementsHeader {
-  grid-row: 1;
-  display: flex;
-  align-items: end;
-  padding-left: 2rem;
-}
-
-.announcementsContent {
-grid-row: 2;
-gap: 1rem;
-padding: 1rem;
-}
-
-.trending {
-  grid-row: 2;
-  display: grid;
-  grid-template-rows: 1fr 7fr;
-  
-}
-
-.trendingContent {
-  gap: 1rem;
-  padding: 1rem;
-  max-height: 300px;
-}
-
-.trendingHeader {
-  display: flex;
-  padding-left: 2rem;
-  align-items: end;
-}
-
-.trenders {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: var(--card-color);
-    border-radius: 8px;
-    margin: .5rem;
-    margin-right: 2rem;
-    box-shadow: var(--box-shadow-color) 0px 1px 4px;
-    gap: 1rem
-}
-
-.trendAvatar img {
-  max-width: 40px;
-  border-radius: 100%;
-} 
-
-.trendPackage {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .sideBar .sidebarText {
-    display:none;
-  }
-  .sideBar {
-    min-width: 70px;
-    grid-column: 1/2;
-  }
-  .mainHeader {
-grid-column: 2/11;
-  }
-
-  .content {
-    grid-column: 2/11;
-  }
-
-  }

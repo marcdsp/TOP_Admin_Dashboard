@@ -5,53 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script type="text/script" src="main.js" defer></script>
+   <script type="text/javascript" src="main.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Admin Dashboard</title>
 </head>
 <body>
     <div class="container">
-        <div class="sideBar">
-            <div class="sidebarTitle"><i class="material-symbols-outlined .title" id="titleIcon">hive</i><span class="sidebarText">Dashboard</span></div>
-            <div class="sidebarMainMenu">
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Home</i><span class="sidebarText">Home</span></a>
-                </div>
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Badge</i><span class="sidebarText">Profile</span></a>
-                </div>
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Chat</i><span class="sidebarText">Messages</span></a>
-                </div>
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">History</i><span class="sidebarText">History</span></a>
-                </div>
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Task</i><span class="sidebarText">Tasks</span></a>
-                </div>
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Groups</i><span class="sidebarText">Communities</span></a>
-                </div>
-            </div>
-            <div class="sidebarSubMenu">
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Settings</i><span class="sidebarText">Settings</span></a>
-                </div>
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Help</i><span class="sidebarText">Support</span></a>
-                </div>
-                <div class="link-2">
-                    <a href="index.htm" class="sidebarLinks"><i class="material-symbols-outlined">Privacy_tip</i><span class="sidebarText">Privacy</span></a>
-                </div>
-            </div>
-        </div>
         <div class="mainHeader">
             <div class="actionLinks">
-                <ul>
-                    <li class="link-2"><a href="index.htm" id="mainHeaderLinks">New</a></li>
-                    <li class="link-2"><a href="index.htm" id="mainHeaderLinks">Upload</a></li>
-                    <li class="link-2"><a href="index.htm" id="mainHeaderLinks">Share</a></li>
-                </ul>
+                <form id="myForm">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Title">                <form>
+                    <br><label for="author">Author</label>
+                    <input type="text" id="author" placeholder="author">                <form>
+                        <br><label for="year">Year</label>
+                    <input type="text" id="year" placeholder="Year">                <form>
+                        <br><label for="status">Has this been read?</label>
+                        <select id="status" name="status">
+                          <option value="read">Yes</option>
+                          <option value="unread">No</option>
+                        </select>
+                        <br>
+                        <button type="submit" id="addBook">Add</button>
+                </form>
             </div>
             <div class="search">
                 <input type="text" class="searchTerm" placeholder="What are you looking for?">
@@ -123,70 +99,11 @@
                 <div class="projectsFooter"></div>
             </div> 
                 <div class="rightPanel">
-                    <div class="announcement">
-                        <div class="announcementsHeader"><h2>Announcements</h2></div>
-                        <div class="announcementsContent">
-                            <div class="rightSideCards">
-                                    <div class="announceItem">
-                                        <h3>Announcement 1</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
-                                        <br>
-                                        <hr>
-                                    </div>
-                                    <div class="announceItem">
-                                        <br>
-                                        <h3>Announcement 2</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
-                                        <br>
-                                        <hr>
-                                    </div>
-                                    <div class="announceItem">
-                                        <br>
-                                        <h3>Announcement 3</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
 
-                                    </div>
-                                </div>
-                        </div>
-
-                    </div>
-                    <div class="trending">
-                        <div class="trendingHeader"><h2>Trending</h2></div>
-                        <div class="trendingContent">
-                                <div class="trenders">
-                                    <div class="trendPackage">
-                                    <div class="trendAvatar"><img src="./assets/avatars/avatar (5).png"></div>
-                                    <div class="announceItem">
-                                        <h4>@millie</h4>
-                                        <p>This one's a monster </p>
-                                    </div>
-                                    </div>
-                                    <div class="trendPackage">
-                                        <div class="trendAvatar"><img src="./assets/avatars/avatar (1).png"></div>                                   
-                                        <div class="announceItem">
-                                        <h4>@teo</h4>
-                                        <p>Ol clumsy legs </p>
-                                    </div>
-                                    </div>
-                                    <div class="trendPackage">
-                                        <div class="trendAvatar"><img src="./assets/avatars/avatar (3).png"></div>                                    
-                                        <div class="announceItem">
-                                        <h4>@lizzo</h4>
-                                        <p>Don't keep me indoors</p>
-                                    </div>
-                                    </div>
-                                    <div class="trendPackage">
-                                        <div class="trendAvatar"><img src="./assets/avatars/avatar (4).png"></div>                                   
-                                        <div class="announceItem">
-                                        <h4>@perny</h4>
-                                        <p>Ol clumsy legs </p>
-                                        </div>
-                                </div>               
-                            </div>
-                        </div>
-                    </div>
+                        </div>                    </div>
                 </div> 
             </div>
        
 </body>
+ <script type="text/script" src="main.js"></script>
 </html>
