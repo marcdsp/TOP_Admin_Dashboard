@@ -45,56 +45,8 @@
         </div>
         <div class="content">
             <div class="contentProjects">
-                <div class="ProjectsHeader"><h2>Projects</h2></div>
-                <div class="projectCards">
-                    <div class="card">
-                        <div class="cardSide"></div>
-                        <div class="cardMain" id="cardMain">
-                            <h3>Landing Page</h3>
-                            <p>The first project of The Odin Project, aimed at teaching some basic css flexbox techniques and tying together other HTML and CSS</p>
-                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="cardSide"></div>
-                        <div class="cardMain" id="cardMain">
-                            <h3>Rock Paper Scissors</h3>
-                            <p>First entry into using Javascript, loops and functions. I used some minimal css to make it look good on various screen sizes.</p><div class="cardIcons"><i class="material-symbols-outlined">star</i> <a href="https://marcdsp.github.io/rock_paper_scissors/"><i class="material-symbols-outlined" id="open">open_in_new</i></a><i class="material-symbols-outlined">share</i></div>
-
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="cardSide"></div>
-                        <div class="cardMain" id="cardMain">
-                            <h3>Etch-a-Sketch</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
-                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="cardSide"></div>
-                        <div class="cardMain" id="cardMain">
-                            <h3>Calculator</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
-                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="cardSide"></div>
-                        <div class="cardMain" id="cardMain">
-                            <h3>Sign-up Form</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
-                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="cardSide"></div>
-                        <div class="cardMain" id="cardMain">
-                            <h3>Admin Dashboard</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, odit alias. Eveniet quidem provident </p>
-                            <div class="cardIcons"><i class="material-symbols-outlined">star</i> <i class="material-symbols-outlined">open_in_new</i><i class="material-symbols-outlined">share</i></div>
-                        </div>
-                    </div>
+                <div class="ProjectsHeader"><h2>Library</h2></div>
+                <div id="projectCards">
                 </div>
                 <div class="projectsFooter"></div>
             </div> 
@@ -103,7 +55,16 @@
                         </div>                    </div>
                 </div> 
             </div>
-       
+            <template id="cardTemplate">
+                <div class="card" id="uidPlaceHolder">
+                    <div class="cardSide"></div>
+                    <div class="cardMain" id="cardMain">
+                        <h3 id="bookTitle">Landing Page</h3>
+                        <p id="bookAuthorLabel">Written by: <span id="bookAuthor"></span></p>
+                        <p id="bookYearLabel">Year Published: <span id="bookYear"></span></p>                                <div class="cardIcons"><i id="deleteBook" class="material-symbols-outlined">delete</i> <i id="editBook" class="material-symbols-outlined">edit</i><i id="bookStatus" class="material-symbols-outlined">book</i></div>
+                    </div>
+                </div>
+            </template>
 </body>
  <script type="text/script" src="main.js"></script>
 </html>

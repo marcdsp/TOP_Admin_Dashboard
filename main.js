@@ -1,12 +1,6 @@
 
 const submit = document.getElementById("addBook");
 
-
-const today = new Date();
-const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-const dateTime = date+' '+time;
-
 submit.addEventListener('click', function(e) {
     e.preventDefault();
 addBookToLibrary()
@@ -25,13 +19,18 @@ function Book(key, title, author, yearPrinted, readStatus)  {
 }
 
 function addBookToLibrary() {
-    let jsKey = dateTime;
+    let jsKey = Date.now();
     let jsTitle = document.getElementById('title').value;
     let jsAuthor = document.getElementById('author').value;
     let jsYear = document.getElementById('year').value;
     let jsStatus = document.getElementById('status').value;
     myLibrary.push(new Book(jsKey, jsTitle, jsAuthor, jsYear, jsStatus)); 
-    console.log(myLibrary);
+    const cardList = document.getElementById("projectCards");
+    while (cardList.hasChildNodes()) {
+      cardList.removeChild(cardList.firstChild);
+    }
+    buildCards();
+
     // TODO Add script for updating DOM when a book is added
 }
 
@@ -45,4 +44,19 @@ function updateStatus () {
 
 function removeBook () {
     // TODO script to remove a book when user clicks the remove book button. Put in an are you sure message.
+}
+
+function elementFromHtml(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.firstElementChild;
+}
+
+function buildCards() {
+    for (let i = 0; i < myLibrary.length; i++) {
+        let cardLocation = document.getElementById('projectCards');
+        cardLocation.appendChild(document.getElementById('cardTemplate').content.cloneNode(true));
+        let updateId = document.getElementById('uidPlaceHolder');
+        updateId.id = myLibrary[i].key;
+    }
 }
