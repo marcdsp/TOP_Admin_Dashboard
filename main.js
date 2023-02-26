@@ -1,14 +1,24 @@
 
 const submit = document.getElementById("addBook");
+const remove = document.getElementById("deleteBook");
 
+
+//trigger to add book
 submit.addEventListener('click', function(e) {
     e.preventDefault();
 addBookToLibrary()
 document.getElementById("myForm").reset();
 });
 
+//trigger to remove book
+//remove.addEventListener('click', function(e) {
+// addBookToLibrary() // TODO find out how to grab the id from the dom
+// document.getElementById("myForm").reset();
+// });
+
 //array where books are stored
 let myLibrary = [];
+
 
 function Book(key, title, author, yearPrinted, readStatus)  {
     this.key = key;
@@ -25,13 +35,19 @@ function addBookToLibrary() {
     let jsYear = document.getElementById('year').value;
     let jsStatus = document.getElementById('status').value;
     myLibrary.push(new Book(jsKey, jsTitle, jsAuthor, jsYear, jsStatus)); 
-    const cardList = document.getElementById("projectCards");
+    clearCards();
+    buildCards();
+}
+// this clears the cards from the dom before rebuilding
+function clearCards() {
+    const cardList = document.getElementById("projectCards");    
     while (cardList.hasChildNodes()) {
       cardList.removeChild(cardList.firstChild);
-    }
-    buildCards();
+    }}
 
-    // TODO Add script for updating DOM when a book is added
+function findCardId() {
+    const cardId = document.getElementById("deleteBook");
+    console.log(cardId.closest(".card"));
 }
 
 function updateBook () {
@@ -42,8 +58,17 @@ function updateStatus () {
     // TODO script to update a book's status when the user toggles the read button
 }
 
-function removeBook () {
-    // TODO script to remove a book when user clicks the remove book button. Put in an are you sure message.
+// this is used to get the index number of the book from the array
+function getIndex (identifier) {
+let bookIndex = myLibrary.findIndex(k => k.key == identifier);
+return bookIndex
+}
+
+function removeBook (identifier) { 
+    let bookIndex = getIndex(identifier);
+    myLibrary.splice(bookIndex,1);
+    clearCards();
+    buildCards();
 }
 
 function elementFromHtml(html) {
@@ -58,5 +83,27 @@ function buildCards() {
         cardLocation.appendChild(document.getElementById('cardTemplate').content.cloneNode(true));
         let updateId = document.getElementById('uidPlaceHolder');
         updateId.id = myLibrary[i].key;
+        let updateTitle = document.getElementById('bookTitle');
+        updateTitle.innerHTML = myLibrary[i].title;
+        updateTitle.id = 'title' + myLibrary[i].key;
+        let updateAuthor = document.getElementById('bookAuthor');
+        updateAuthor.innerHTML = myLibrary[i].author;
+        updateAuthor.id = 'author' + myLibrary[i].key;
+        let updateYear = document.getElementById('bookYear');
+        updateYear.innerHTML = myLibrary[i].yearPrinted;
+        updateYear.id = 'year' + myLibrary[i].key;
+        let updateDelete = document.getElementById('deleteBook');
+        updateDelete.id = 'delete' + myLibrary[i].key;
+        let updateEdit = document.getElementById('editBook');
+        updateEdit.id = 'edit' + myLibrary[i].key;
+        let updateStatus = document.getElementById('bookStatus');
+        updateStatus.innerHTML = 'Auto_stories';
+        if (myLibrary[i].readStatus === 'read') {
+            updateStatus.innerHTML = 'Import_Contacts';}
+        updateStatus.id = 'status' + myLibrary[i].key;
+        document.querySelector('#delete' + myLibrary[i].key)
+        .addEventListener('click',function(){
+            removeBook(this.closest(".card").id);
+        })
     }
 }
