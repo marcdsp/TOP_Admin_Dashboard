@@ -16,8 +16,15 @@ document.getElementById("myForm").reset();
 // document.getElementById("myForm").reset();
 // });
 
-//array where books are stored
-let myLibrary = [];
+//check if the array is already in localStorage, if not create empty array in localStorage
+if (JSON.parse(localStorage.getItem("myLibrary") === null)) {
+    let myLibrary = [];
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary))
+ }
+let myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
+
+//call buildCards in the event there is something in localStorage
+buildCards();
 
 
 function Book(key, title, author, yearPrinted, readStatus)  {
@@ -35,6 +42,7 @@ function addBookToLibrary() {
     let jsYear = document.getElementById('year').value;
     let jsStatus = document.getElementById('status').value;
     myLibrary.push(new Book(jsKey, jsTitle, jsAuthor, jsYear, jsStatus)); 
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary))
     clearCards();
     buildCards();
 }
